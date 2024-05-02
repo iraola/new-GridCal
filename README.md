@@ -1,3 +1,17 @@
+This is a modified version of GridCal for the direct installation of `GridCalEngine` without the need of a GUI, specifically following the `205_ACOPF` branch.
+
+If you have problems pulling the latest version of the repository, use:
+
+```bash
+git fetch origin
+git reset --hard origin/205_ACOPF
+```
+
+&nbsp;
+
+&nbsp;
+
+
 # GridCal
 
 GridCal is a top tier power systems planning and simulation software. 
