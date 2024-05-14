@@ -1,6 +1,26 @@
 This is a modified version of GridCal for the direct installation of `GridCalEngine` without the need of a GUI, specifically following the `205_ACOPF` branch.
 
-If you have problems pulling the latest version of the repository, use:
+#### Pulling from the official GridCal repo
+
+The first time one wants to pull from the official GridCal branch, we must set up the additional remote:
+
+```sh
+git remote add official https://github.com/SanPen/GridCal.git
+```
+
+The new remote is called `official`, as opposed to the default one called `origin`.
+
+From now on, whenever a new commit is made to the mainstream GridCal 205_ACOPF branch, we can directly pull from it, then push the result of the rebase to our new-GridCal repository (requires the flag `-f` due to the rewritting in history: use carefully):
+
+```bash
+git pull --rebase official 205_ACOPF
+git push -f origin 205_ACOPF
+```
+Make sure there are no ongoing changes in the working directory nor the staging area while doing these operations.
+
+#### Issues
+
+If you have problems pulling the latest version of this repository (conflict error messages or similar), use:
 
 ```bash
 git fetch origin
